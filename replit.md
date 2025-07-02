@@ -100,11 +100,31 @@ This is a romantic birthday website built with React and Express.js, designed to
 - API routes available at `/api/*` prefix
 - Database migrations run via `npm run db:push`
 
+## Deployment
+
+The website is ready for deployment to GitHub and Vercel:
+
+### GitHub Deployment Steps
+1. Create a new repository on GitHub
+2. Add the remote repository to your local git
+3. Push the code to GitHub
+4. Connect the repository to Vercel for automatic deployment
+
+### Vercel Configuration
+- `vercel.json` configured for full-stack deployment
+- Frontend builds to `dist/public`
+- Backend API routes served from `/api/*`
+- Static files served from root
+
 ## Changelog
 
 ```
 Changelog:
-- July 02, 2025. Initial setup
+- July 02, 2025. Initial setup with romantic birthday theme
+- July 02, 2025. Added Diya's personal photos to gallery
+- July 02, 2025. Personalized messages with Diya's name
+- July 02, 2025. Fixed photo sizing and scrolling issues
+- July 02, 2025. Created deployment configuration for GitHub/Vercel
 ```
 
 ## User Preferences
