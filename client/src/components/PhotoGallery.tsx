@@ -46,10 +46,10 @@ export default function PhotoGallery({ onNext }: PhotoGalleryProps) {
           viewport={{ once: true }}
         >
           <h2 className="font-dancing text-5xl lg:text-7xl gradient-text mb-4">
-            Diya's Beautiful Memories for Me ✨
+            Your Beautiful Memories for Me ✨
           </h2>
           <p className="text-xl lg:text-2xl font-playfair text-gray-700">
-            Every photo tells a story of Diya's amazing spirit
+            Every photo tells a story of your amazing spirit
           </p>
         </motion.div>
 

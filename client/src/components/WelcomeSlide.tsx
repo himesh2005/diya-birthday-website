@@ -110,7 +110,7 @@ export default function WelcomeSlide({ onNext }: WelcomeSlideProps) {
               viewport={{ once: true }}
               transition={{ delay: 0.8 }}
             >
-              Diya's Beautiful Memories for Me 📸
+              Your Beautiful Memories for Me 📸
             </motion.button>
           </div>
         </div>
