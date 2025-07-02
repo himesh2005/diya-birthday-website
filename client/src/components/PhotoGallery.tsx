@@ -54,7 +54,7 @@ export default function PhotoGallery({ onNext }: PhotoGalleryProps) {
         </motion.div>
 
         {/* Photo grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
           {photos.map((photo, index) => (
             <motion.div
               key={index}
@@ -88,11 +88,14 @@ export default function PhotoGallery({ onNext }: PhotoGalleryProps) {
                 }}
               />
               <div className="rounded-2xl overflow-hidden shadow-lg bg-white p-3 hover:shadow-2xl transition-shadow duration-300">
-                <img
-                  src={photo.src}
-                  alt={`Beautiful moment ${index + 1}`}
-                  className="w-full h-64 object-cover rounded-lg"
-                />
+                <div className="aspect-[3/4] overflow-hidden rounded-lg">
+                  <img
+                    src={photo.src}
+                    alt={`Beautiful moment ${index + 1}`}
+                    className="w-full h-full object-cover object-center"
+                    style={{ objectPosition: 'center 20%' }}
+                  />
+                </div>
                 <div className="p-4">
                   <p className="text-sm font-dancing text-gray-600">{photo.caption}</p>
                 </div>
