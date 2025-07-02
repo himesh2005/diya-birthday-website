@@ -1,0 +1,125 @@
+import { motion } from "framer-motion";
+import img1 from "@assets/new 1_1751446211744.jpg";
+import img2 from "@assets/new 3_1751446211744.jpg";
+import img3 from "@assets/new 33_1751446211745.jpg";
+import img4 from "@assets/Screenshot_2022-12-20-20-43-53-20_1751446211745.jpg";
+import img5 from "@assets/Screenshot_2023-06-28-00-03-07-20_99c04817c0de5652397fc8b56c3b3817_1751446211745.jpg";
+import img6 from "@assets/Screenshot_2023-06-28-00-03-55-72_99c04817c0de5652397fc8b56c3b3817_1751446211746.jpg";
+
+interface PhotoGalleryProps {
+  onNext: () => void;
+}
+
+const photos = [
+  {
+    src: img1,
+    caption: "Your radiant smile lights up my world",
+  },
+  {
+    src: img2,
+    caption: "Elegance personified ✨",
+  },
+  {
+    src: img3,
+    caption: "Grace and beauty combined 🌹",
+  },
+  {
+    src: img4,
+    caption: "Natural beauty in every moment 💕",
+  },
+  {
+    src: img5,
+    caption: "Sparkling like the stars ⭐",
+  },
+  {
+    src: img6,
+    caption: "Cultural elegance at its finest 🌺",
+  },
+];
+
+export default function PhotoGallery({ onNext }: PhotoGalleryProps) {
+  return (
+    <div className="h-full flex flex-col justify-center py-12 overflow-y-auto">
+      <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
+        <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="font-dancing text-5xl lg:text-7xl gradient-text mb-4">
+            Your Beautiful Moments ✨
+          </h2>
+          <p className="text-xl lg:text-2xl font-playfair text-gray-700">
+            Every photo tells a story of your amazing spirit
+          </p>
+        </motion.div>
+
+        {/* Photo grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {photos.map((photo, index) => (
+            <motion.div
+              key={index}
+              className="relative group"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              whileHover={{ 
+                scale: 1.05, 
+                rotate: 2,
+                transition: { duration: 0.3 }
+              }}
+            >
+              <motion.i
+                className={`fas fa-heart absolute text-3xl z-10 ${
+                  index % 4 === 0
+                    ? "text-pink-custom -top-4 -left-4"
+                    : index % 4 === 1
+                    ? "text-rose-custom -top-2 -right-2"
+                    : index % 4 === 2
+                    ? "text-coral-custom -bottom-2 -left-2"
+                    : "text-pink-custom -top-3 -right-1"
+                }`}
+                animate={{ y: [-20, 0, -20], rotate: [0, 180, 360] }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: index * 0.5,
+                }}
+              />
+              <div className="rounded-2xl overflow-hidden shadow-lg bg-white p-3 hover:shadow-2xl transition-shadow duration-300">
+                <img
+                  src={photo.src}
+                  alt={`Beautiful moment ${index + 1}`}
+                  className="w-full h-64 object-cover rounded-lg"
+                />
+                <div className="p-4">
+                  <p className="text-sm font-dancing text-gray-600">{photo.caption}</p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.div
+          className="text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.8 }}
+        >
+          <motion.button
+            onClick={onNext}
+            className="bg-gradient-to-r from-pink-custom to-rose-custom text-white px-8 py-4 rounded-full text-xl font-semibold hover:shadow-lg transition-all duration-300"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Read My Heart's Message 💌
+          </motion.button>
+        </motion.div>
+      </div>
+    </div>
+  );
+}
