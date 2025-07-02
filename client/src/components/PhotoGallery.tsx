@@ -1,10 +1,4 @@
 import { motion } from "framer-motion";
-import img1 from "@assets/new 1_1751446211744.jpg";
-import img2 from "@assets/new 3_1751446211744.jpg";
-import img3 from "@assets/new 33_1751446211745.jpg";
-import img4 from "@assets/Screenshot_2022-12-20-20-43-53-20_1751446211745.jpg";
-import img5 from "@assets/Screenshot_2023-06-28-00-03-07-20_99c04817c0de5652397fc8b56c3b3817_1751446211745.jpg";
-import img6 from "@assets/Screenshot_2023-06-28-00-03-55-72_99c04817c0de5652397fc8b56c3b3817_1751446211746.jpg";
 
 interface PhotoGalleryProps {
   onNext: () => void;
@@ -12,28 +6,32 @@ interface PhotoGalleryProps {
 
 const photos = [
   {
-    src: img1,
-    caption: "Your radiant smile lights up my world",
+    src: "/images/IMG_20240707_221128_1751446211743.jpg",
+    caption: "Your radiant smile lights up my world 💕",
   },
   {
-    src: img2,
+    src: "/images/new 1_1751446211744.jpg",
     caption: "Elegance personified ✨",
   },
   {
-    src: img3,
+    src: "/images/new 3_1751446211744.jpg",
     caption: "Grace and beauty combined 🌹",
   },
   {
-    src: img4,
-    caption: "Natural beauty in every moment 💕",
+    src: "/images/new 33_1751446211745.jpg",
+    caption: "Natural beauty in every moment 💫",
   },
   {
-    src: img5,
+    src: "/images/Screenshot_2022-12-20-20-43-53-20_1751446211745.jpg",
     caption: "Sparkling like the stars ⭐",
   },
   {
-    src: img6,
+    src: "/images/Screenshot_2023-06-28-00-03-07-20_99c04817c0de5652397fc8b56c3b3817_1751446211745.jpg",
     caption: "Cultural elegance at its finest 🌺",
+  },
+  {
+    src: "/images/Screenshot_2023-06-28-00-03-55-72_99c04817c0de5652397fc8b56c3b3817_1751446211746.jpg",
+    caption: "Stunning in every way 💖",
   },
 ];
 
@@ -48,7 +46,7 @@ export default function PhotoGallery({ onNext }: PhotoGalleryProps) {
           viewport={{ once: true }}
         >
           <h2 className="font-dancing text-5xl lg:text-7xl gradient-text mb-4">
-            Your Beautiful Moments ✨
+            Your Beautiful Memories for Me ✨
           </h2>
           <p className="text-xl lg:text-2xl font-playfair text-gray-700">
             Every photo tells a story of your amazing spirit
