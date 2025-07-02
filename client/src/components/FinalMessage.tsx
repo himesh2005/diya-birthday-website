@@ -6,8 +6,8 @@ interface FinalMessageProps {
 
 export default function FinalMessage({ onRestart }: FinalMessageProps) {
   return (
-    <div className="h-full flex items-center justify-center">
-      <div className="container mx-auto px-6 lg:px-12 max-w-5xl">
+    <div className="min-h-screen flex items-center justify-center py-8">
+      <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
         <div className="text-center relative z-10">
           {/* Surrounding hearts */}
           <motion.i

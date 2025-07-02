@@ -37,8 +37,8 @@ const photos = [
 
 export default function PhotoGallery({ onNext }: PhotoGalleryProps) {
   return (
-    <div className="h-full flex flex-col justify-center py-12 overflow-y-auto">
-      <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
+    <div className="min-h-screen flex flex-col py-8 overflow-y-auto">
+      <div className="container mx-auto px-4 lg:px-8 max-w-7xl flex-1">
         <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 50 }}

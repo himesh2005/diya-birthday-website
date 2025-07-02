@@ -6,8 +6,8 @@ interface WelcomeSlideProps {
 
 export default function WelcomeSlide({ onNext }: WelcomeSlideProps) {
   return (
-    <div className="flex items-center justify-center h-full">
-      <div className="container mx-auto px-6 lg:px-12 max-w-6xl">
+    <div className="min-h-screen flex items-center justify-center py-8">
+      <div className="container mx-auto px-4 lg:px-8 max-w-6xl">
         <div className="text-center relative z-10">
           {/* Hearts decoration around the message */}
           <motion.i

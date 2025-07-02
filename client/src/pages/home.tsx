@@ -90,7 +90,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-rose-50 to-pink-50 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-rose-50 to-pink-50 relative">
       <FloatingHearts />
       
       <NavigationDots 
@@ -99,7 +99,7 @@ export default function Home() {
         onSlideChange={goToSlide} 
       />
 
-      <div className="relative w-full h-screen">
+      <div className="relative w-full min-h-screen">
         <AnimatePresence mode="wait" custom={currentSlide}>
           <motion.div
             key={currentSlide}
@@ -109,7 +109,7 @@ export default function Home() {
             animate="center"
             exit="exit"
             transition={slideTransition}
-            className="absolute inset-0"
+            className="absolute inset-0 overflow-y-auto"
           >
             {currentSlide === 0 && <WelcomeSlide onNext={() => goToSlide(1)} />}
             {currentSlide === 1 && <PhotoGallery onNext={() => goToSlide(2)} />}
