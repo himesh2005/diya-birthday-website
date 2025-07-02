@@ -39,7 +39,7 @@ export default function FinalMessage({ onRestart }: FinalMessageProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            You Are My Everything 💖
+            Diya, You Are My Everything 💖
           </motion.h2>
 
           <motion.div
@@ -50,13 +50,13 @@ export default function FinalMessage({ onRestart }: FinalMessageProps) {
             transition={{ delay: 0.3 }}
           >
             <p className="text-xl lg:text-2xl font-playfair text-gray-800 leading-relaxed mb-8">
-              As I create this little corner of the internet just for you, I want you to know that{" "}
+              As I create this little corner of the internet just for you, Diya, I want you to know that{" "}
               <span className="gradient-text font-semibold">you are my greatest support</span>, my
               inspiration, and my joy.
             </p>
 
             <p className="text-lg lg:text-xl font-inter text-gray-700 leading-relaxed mb-8">
-              Every photo here tells a story of your beauty, inside and out. Your smile, your
+              Every photo here tells a story of your beauty, inside and out, Diya. Your smile, your
               grace, your kind heart - they all make my world brighter. I am always waiting for
               you, always here for you, and always grateful for your presence in my life.
             </p>

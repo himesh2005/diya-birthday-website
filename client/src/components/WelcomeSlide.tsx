@@ -40,7 +40,7 @@ export default function WelcomeSlide({ onNext }: WelcomeSlideProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            Happy Birthday, Beautiful! 🎉
+            Happy Birthday, Diya! 🎉
           </motion.h1>
 
           <div className="max-w-4xl mx-auto space-y-8">
@@ -51,7 +51,7 @@ export default function WelcomeSlide({ onNext }: WelcomeSlideProps) {
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
             >
-              Every day with you feels like a celebration, but today is extra special because it's{" "}
+              Every day with you feels like a celebration, Diya, but today is extra special because it's{" "}
               <span className="gradient-text font-semibold">your day</span> ✨
             </motion.p>
 
@@ -63,14 +63,14 @@ export default function WelcomeSlide({ onNext }: WelcomeSlideProps) {
               transition={{ delay: 0.5 }}
             >
               <p className="text-xl lg:text-2xl font-inter text-gray-800 leading-relaxed mb-6">
-                I want you to know that you are my{" "}
+                I want you to know, Diya, that you are my{" "}
                 <span className="gradient-text font-semibold">greatest support</span>, my source of
                 happiness, and the reason I smile every day. Your presence in my life makes
                 everything brighter and more beautiful.
               </p>
 
               <p className="text-lg lg:text-xl font-inter text-gray-700 leading-relaxed">
-                I am always waiting for you, always thinking of you, and always grateful for the
+                I am always waiting for you, Diya, always thinking of you, and always grateful for the
                 joy you bring into my world. You deserve all the love and happiness in the
                 universe! 💕
               </p>
@@ -110,7 +110,7 @@ export default function WelcomeSlide({ onNext }: WelcomeSlideProps) {
               viewport={{ once: true }}
               transition={{ delay: 0.8 }}
             >
-              Your Beautiful Memories for Me 📸
+              Diya's Beautiful Memories for Me 📸
             </motion.button>
           </div>
         </div>
